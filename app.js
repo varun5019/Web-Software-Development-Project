@@ -5,9 +5,7 @@ const app = new Hono();
 let count = 0;
 let answer = 0;
 
-app.get("/", (c) => c.text(count));
-
-app.post("/", (c) => {
+app.get("/", (c) => {
   count++;
   if (count === 1)
   {
